@@ -1,0 +1,9 @@
+In Run.php line 495:
+
+Suite '' could not be found{
+    "require-dev": {
+        "codeception/codeception": "^5.0",
+        "codeception/module-phpbrowser": "*",
+        "codeception/module-asserts": "*"
+    }
+}
