@@ -7,25 +7,12 @@ use Tests\Support\AcceptanceTester;
 
 class FirstCest
 {
-    public function _before(AcceptanceTester $I)
-    {
-    }
-
-    public function _after(AcceptanceTester $I)
-    {
-    }
-
-    // tests
-    public function tryToTest(AcceptanceTester $I)
-    {
-    }
     public function myTest0(AcceptanceTester $I) {
         $I->wantTo('Проверить работу главной страницы.');
         $I->amOnPage('/actions/Catalog.action');
         $I->seeResponseCodeIs(\Codeception\Util\HttpCode::OK);
-
-
     }
+
     public function myTest1(AcceptanceTester $I)
     {
         $I->amOnPage('/actions/Catalog.action');
@@ -37,7 +24,6 @@ class FirstCest
         $I->see('Sign In');
         $I->see('Breeds');
         $I->seeResponseCodeIsSuccessful();
-
     }
 
     public function myTest3(AcceptanceTester $I) {
@@ -45,7 +31,6 @@ class FirstCest
         $I->see('Username');
         $I->see('Password');
         $I->seeResponseCodeIsSuccessful();
-
     }
 
     public function myTest4(AcceptanceTester $I) {
@@ -54,7 +39,6 @@ class FirstCest
         $I->fillField('keyword','test');
         $I->click('Search');
         $I->see('Product ID');
-
     }
 
     public function myTest41(AcceptanceTester $I) {
@@ -63,15 +47,14 @@ class FirstCest
         $I->fillField('keyword','');
         $I->click('Search');
         $I->see('Please enter a keyword to search for, then press the search button.');
-
     }
+
     public function myTest5(AcceptanceTester $I) {
         $I->wantTo('2 Проверить работу поиска.');
         $I->amOnPage('/actions/Catalog.action');
         $I->fillField('keyword','fish');
         $I->click('Search');
         $I->see('Goldfish');
-
     }
 
     public function myTest6(AcceptanceTester $I) {
@@ -85,9 +68,7 @@ class FirstCest
         $I->fillField('repeatedPassword','Test123');
         $I->click('Save Account Information');
         $I->seeResponseCodeIs(500);
-
     }
-
 
 
 }
