@@ -1,4 +1,4 @@
-.idea/
+#.idea/
 vendor/
 .DS_Store
 .DS_Store/
